@@ -8,13 +8,13 @@
   backdrop-filter: blur(30px);
   position: sticky;
   display: flex;
-  z-index: 10;
+  z-index: 20;
   top: 0;
   padding: 1.25rem 0;
   width: 100%;
   padding-right: 3rem;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 
   ul {
     display: flex;

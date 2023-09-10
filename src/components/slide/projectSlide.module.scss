@@ -13,7 +13,7 @@
 .swiperSlide {
   background-color:#f2f2f7;
   width: 560px;
-  height: 560px;
+  height: 680px;
   overflow: hidden;
 
   .mainSection {
@@ -31,6 +31,7 @@
         height: 100%;
         padding: 0.5rem;
         img {
+          border: 1px solid #cccccc;
           width: 100%;
           height: 100%;
         }
@@ -74,7 +75,7 @@
     }
 
     .mainInfo {
-      line-height: normal;
+      line-height: 1.5rem;
       margin-top: 0.6rem;
       font-weight: 300;
       font-size: 14px;

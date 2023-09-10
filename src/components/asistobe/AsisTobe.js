@@ -107,7 +107,7 @@ const AsisTobe = ({ scrollRef }) => {
             ref={thirdRef}
           >
             <p className={styles.toBeTitle}>To Be</p>
-            <p className={styles.toBeSubTitle}>미래에 저는 .. 💭</p>
+            <p className={styles.toBeSubTitle}>미래의 저는 .. 💭</p>
             <div className={styles.toBeList}>
               <ul className={`${styles.fade} ${toFade ? styles.fadeLoad : ''}`}>
                 <li>

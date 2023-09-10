@@ -10,7 +10,7 @@
 }
 
 .projectSection {
-  height: 800px;
+  height: 960px;
 
   .projectWrapper {
     display: flex;
@@ -52,6 +52,13 @@
   transition-delay: 0.1s;
 }
 
+
+// ** 타블렛 영역 **
+@media screen and (theme.$tabletSize) {
+    .projectSection {
+      height: 730px;
+    }
+}
 
 // ** 모바일 영역 **
 @media screen and (theme.$mobileSize) {
