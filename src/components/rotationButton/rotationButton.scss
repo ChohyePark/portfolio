@@ -1,0 +1,31 @@
+
+
+.c-ip-circle-text__svg {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 50%;
+  animation: c-ip-circle-text-rotation 20s linear infinite;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: c-ip-circle-text-rotation;
+}
+
+
+@keyframes c-ip-circle-text-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-1turn);
+  }
+}
+
+

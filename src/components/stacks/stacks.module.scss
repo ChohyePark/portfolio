@@ -1,0 +1,372 @@
+@use "../../styles/typo";
+@use "../../styles/theme";
+@use "../../styles/animation";
+
+body {
+  background-color: #E5E4E2;
+}
+
+%li {
+  font-family: typo.$notosans;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  width: 90px;
+  height: 90px;
+  background-color: #000000;
+  border-radius: 10px;
+  border: 1px solid rgb(30, 30, 35);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  transition: 300ms ease;
+}
+
+%imgBox {
+  margin: 20px;
+  width: 50px;
+  height: 50px;
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+%stackItem {
+  position: absolute;
+  opacity: 0;
+  width: 180px;
+  left:110px;
+  height: 90px;
+  overflow: hidden;
+  color: #E5E4E2;
+  cursor: default;
+  transition: left 250ms ease, opacity 400ms ease;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.stackSection {
+  height: 700px;
+  display: flex;
+
+  .stackWrapper {
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    .stack {
+      width: 800px;
+
+      .stackTitle {
+        font-family: typo.$nunito;
+        font-size: 42px;
+      }
+
+      .frontendTitle {
+        border-radius: 10px;
+        width: 180px;
+        padding: 4px;
+        border: 1px solid #1a1a1a;;
+        font-family: typo.$nunito;
+        margin-top: 4rem;
+        font-size: 28px;
+      }
+
+      .guide {
+        font-family: typo.$notosans;
+        padding-left: 1rem;
+        margin-top: 0.8rem;
+        font-size: 14px;
+      }
+
+      .frontWrapper {
+        margin-top: 2.5rem;
+        display: flex;
+
+
+        ul {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 30px;
+        }
+
+        ul li{
+          @extend %li;
+
+          .imgBox {
+            @extend %imgBox;
+          }
+
+          &:hover {
+            width: 300px;
+            overflow: visible;
+        
+            .frontItem {
+              opacity: 1;
+            }
+          }
+          .frontItem {
+            @extend %stackItem;
+          }
+        }   
+      }
+      .backendTitle {
+        border-radius: 10px;
+        width: 180px;
+        padding: 4px;
+        border: 1px solid #1a1a1a;;
+        font-family: typo.$nunito;
+        margin-top: 4rem;
+        font-size: 28px;
+      }
+
+      .backWrapper {
+        margin-top: 2.5rem;
+        display: flex;
+
+        ul {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 35px;
+        }
+
+        ul li{
+          @extend %li;
+
+          .imgBox {
+            @extend %imgBox;
+          }
+
+          &:hover {
+            width: 300px;
+            overflow: visible;
+        
+            .backItem {
+              opacity: 1;
+            }
+          }
+          .backItem {
+            @extend %stackItem;
+          }
+        }   
+      }
+    }
+  }
+}
+
+
+.stackName {
+  font-family: typo.$nunito;
+  font-size: 18px;
+  margin-top: 9px;
+}
+
+.stackDescription {
+  line-height: normal;
+  margin-top: 3px;
+  font-size: 12px;
+}
+
+.designSection {
+  width: 100%;
+  height: 140px;
+
+  .lineX {
+    width: 100%;
+    height: 1px;
+    background-color: #1a1a1a;
+  }
+}
+
+// ** 타블렛 영역 **
+
+@media screen and (theme.$tabletSize){
+  .guide {
+    display: none;
+  }
+
+  .stackSection {
+    width: 100%;
+    height: fit-content;
+  
+    .stackWrapper {
+      align-items: center;
+      justify-content: center;
+
+      .stack {
+        padding-bottom: 4rem;
+        .frontendTitle {
+          margin: 3rem auto;
+        }        
+        .frontWrapper {
+          align-items: center;
+          justify-content: center;
+          ul {
+            flex-direction: column;
+          
+           li {
+            width: 380px;
+            overflow: visible;
+            &:hover {
+              width: 380px;
+              scale: (1.1);
+            }
+            .frontItem {
+              opacity: 1;
+            }
+          }
+        }
+      }
+        .backendTitle {
+          margin: 3rem auto;
+        }
+        .backWrapper{
+          align-items: center;
+          justify-content: center;
+          
+          ul {
+            flex-direction: column;
+
+            li {
+              width: 380px;
+              overflow: visible;
+              
+              &:hover {
+                width: 380px;
+                scale : (1.1)
+              }
+
+              .backItem {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ** 모바일 영역 **
+
+@media screen and (theme.$mobileSize) {
+  .lineY {
+    display: none;
+  }
+
+  .guide {
+    display: none;
+  }
+
+  .stackSection {
+    width: 100%;
+    height: fit-content;
+  
+    .stackWrapper {
+      align-items: center;
+      justify-content: center;
+
+      .stack {
+        .frontendTitle {
+          margin: 3rem auto;
+        }        
+        .frontWrapper {
+          align-items: center;
+          justify-content: center;
+          ul {
+            flex-direction: column;
+          
+           li {
+            width: 380px;
+            overflow: visible;
+            &:hover {
+              width: 380px;
+              scale: (1.1);
+            }
+            .frontItem {
+              opacity: 1;
+            }
+          }
+        }
+      }
+        .backendTitle {
+          margin: 3rem auto;
+        }
+        .backWrapper{
+          align-items: center;
+          justify-content: center;
+          
+          ul {
+            flex-direction: column;
+
+            li {
+              width: 380px;
+              overflow: visible;
+              
+              &:hover {
+                width: 380px;
+                scale : (1.1)
+              }
+
+              .backItem {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .designSection {
+    .lineX {
+      display: none;
+    }
+  }
+}
+
+// ** 애니메이션 효과 
+
+.lineY{
+  position: relative;
+  height: 100%;
+  right: 70px;
+  width: 1px;
+  background-color: black;
+}
+
+.slideUp{
+  @include animation.slide-up
+}
+
+.slideUpLoad {
+  @include animation.slide-up-load;
+}
+
+.fade {
+  @include animation.fade;
+}
+
+.fadeLoad {
+  @include animation.fade-load;
+}
+
+.line {
+  @include animation.scale;
+}
+
+.lineLoad {
+  @include animation.scale-load;
+}

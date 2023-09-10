@@ -1,0 +1,25 @@
+@use "../../styles/typo";
+@use "../../styles/theme";
+
+
+.container {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    max-width:390px;
+    font-family: typo.$nunito;
+    font-size: 14px;
+  }
+}
+
+// ** 모바일 영역 **
+
+@media screen and (theme.$mobileSize) {
+  .container {
+    p {
+      font-size: 12px;
+    }
+  }
+}

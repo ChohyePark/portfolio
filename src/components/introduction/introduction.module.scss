@@ -1,0 +1,276 @@
+@use "../../styles/typo";
+@use "../../styles/theme";
+@use "../../styles/animation";
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  height: 778px;
+  display: flex;
+  flex-direction: column;
+}
+
+.introSection {
+  height: 668px;
+  width: 100%;
+  display: flex;
+
+  .introWrapper {
+    padding-left: 6.2rem;
+    width: 100%;
+
+    .title {
+      padding-top: 2rem;
+      width: 800px;
+      height: fit-content;
+      padding-bottom: 5rem;
+   
+      .slideText {
+        font-family: typo.$nunito;
+        font-size: 96px;
+        margin-bottom: 3rem;
+      }
+
+      .fadeText {
+        width: 830px;
+        font-family: typo.$notosans;
+        line-height: 2rem;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .info {
+      width: fit-content;
+      display: flex;
+      gap: 30rem;
+
+      .contact {
+        .contactTitle {
+          font-family: typo.$nunito;
+          font-size: 42px;
+          padding-bottom: 1.7rem;
+        }
+        .contactList li {
+          font-family: typo.$notosans;
+          margin-bottom: 12px;  
+          width: 210px;
+          &:first-child:hover {
+            font-weight: bold;
+          }
+        }
+      }
+
+      .experience {
+        .experienceTitle {
+          font-family: typo.$nunito;
+          font-size: 42px;
+          padding-bottom: 1.7rem;
+        }
+        .experienceList li{
+          font-family: typo.$notosans;
+          margin-bottom: 9px;
+          line-height: normal;
+          font-size: 14px;
+          width: 210px;
+        }
+      }
+    }
+  }
+}
+
+.designSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 140px;
+
+  .xLine {
+    flex-shrink: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #1a1a1a;
+  }
+}
+
+ // ** 타블렛 영역 ** 
+ @media screen and (theme.$tabletSize) {
+  .introSection {
+    height: 100%;
+    .introWrapper {
+      padding-left: 1rem ;
+
+      .title {
+        font-size: 16px;
+
+        .cycle {
+          left: 15rem;
+       }
+      }
+      .info {
+        gap: 5rem;
+      }
+    }
+    .yLine {
+      display: none;
+    }
+  }
+}
+// ** 모바일 영역 **
+@media screen and (theme.$mobileSize){
+  .container {
+    height: 960px;
+  }
+
+  .introSection {
+    .introWrapper {
+      padding: 0;
+
+      .title {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+        .cycle {
+          display: none;
+       }
+        .slideText {
+          text-align: center;
+          font-family: typo.$nunito;
+          font-size: 72px;
+          margin-bottom: 3rem;
+        }
+  
+        .fadeText {
+          margin: auto;
+          max-width:390px;
+          font-size: 17px;
+          padding: 13px;
+          text-align: center;
+          font-family: typo.$notosans;
+          line-height: 2rem;
+        } 
+      }
+
+      .info {
+        padding-left:16px;
+        width: 100%;
+        gap: 3rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .contact {
+          .contactTitle {
+            font-size: 46px;
+            text-align: center;
+          }
+          .contactList li{
+            text-align: center;
+          }
+        }
+
+        .experience {
+          .experienceTitle {
+            font-size: 46px;
+            text-align: center;
+          }
+          .experienceList li {
+            text-align: center;
+          }
+        }
+       
+      }
+    }
+    .yLine {
+      display: none;
+    }
+  }
+  .designSection {
+    .xLine {
+      display: none;
+    }
+    
+    .buttonBox {
+      display: none;
+    }
+  }
+}
+
+.rotationButton {
+  transform: scale(0);
+  transition: 2s ease;
+  transition-delay: 0.1s;
+}
+
+.buttonBox {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  align-self: end;
+  right: 1rem;
+  top: 0.8rem;
+}
+
+.yLine {
+  position: relative;
+  left: 70px;
+  height: 100%;
+  width: 1px;
+  background-color: #1a1a1a;
+}
+
+
+// ** 애니메이션 효과 class **
+.cycle {
+  position: relative;
+  z-index: 5;
+  top: 1rem;
+  left: 15rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50rem;
+  background-color: black;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.line {
+ @include animation.scale;
+}
+
+.load {
+  @include animation.scale-load;
+}
+
+.slideDown {  
+  @include animation.slide-down
+}
+
+.slideDownLoad {
+  @include animation.slide-down-load
+}
+
+.fade {
+  @include animation.fade;
+}
+
+.fadeLoad {
+  @include animation.fade-load;
+}
+
+.slideUp {
+  @include animation.slide-up;
+}
+
+.slideUpLoad {
+  @include animation.slide-up-load;
+}
+
+
+
