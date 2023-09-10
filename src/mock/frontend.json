@@ -1,0 +1,32 @@
+[
+  {
+    "logo": "html",
+    "stack": "HTML5",
+    "description": "기본적인 사용법과 활용법을 이해하고 있으며 프로젝트에 적용할 수 있습니다."
+  },
+  {
+    "logo": "css",
+    "stack": "CSS",
+    "description": "flexbox,gird를 적절히 활용하여 반응형 웹을 만들 수 있습니다."
+  },
+  {
+    "logo": "scss",
+    "stack": "SCSS",
+    "description": "SCSS 모듈화와 확장,상속 개념을 이해하고 있으며 이를 활용하여 프로젝트에 적용할 수 있습니다."
+  },
+  {
+    "logo": "react",
+    "stack": "React",
+    "description": "React 구조와 동작 원리를 이해하고 있으며 여러 hook을 활용하여 프로젝트에 적용할 수 있습니다."
+  },
+  {
+    "logo": "js",
+    "stack": "JavaScript",
+    "description": "자바스크립트 기본개념과 동작원리를 이해하고 있으며 프로젝트에 적용할 수 있습니다."
+  },
+  {
+    "logo": "jquery",
+    "stack": "JQuery",
+    "description": "사용경험이 있으며 기본적인 메소드를 활용할 수 있습니다."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "logo": "java",
+    "stack": "JAVA",
+    "description": "기본적인 개념과 원리를 이해하고 있으며 프로젝트에 적용할 수 있습니다."
+  },
+  {
+    "logo": "spring",
+    "stack": "Spring",
+    "description": "기본적인 개념과 원리를 이해하고 있으며 프로젝트에 적용할 수 있습니다."
+  },
+  {
+    "logo": "mysql",
+    "stack": "MySQL",
+    "description": "사용경험이 있으며 학습하며 프로젝트에 적용할 수 있습니다."
+  },
+  {
+    "logo": "jsp",
+    "stack": "Jsp",
+    "description": "기본적인 개념과 원리를 이해하고 있으며 프로젝트에 적용할 수 있습니다."
+  }
+]
