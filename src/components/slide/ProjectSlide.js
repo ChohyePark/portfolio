@@ -45,10 +45,16 @@ export default function ProjectSlide({ projects }) {
                 </div>
               </section>
               <section className={styles.infoSection}>
-                <p className={styles.infoTitle}>
-                  프로젝트 후기 및 회고 <i className='ri-message-2-line'></i>{' '}
+                <p className={styles.developmentTitle}>
+                  담당 개발 내용 <i className='ri-message-2-line'></i>{' '}
                 </p>
-                <p className={styles.mainInfo}>{project.mainInfo}</p>
+                <p className={styles.development}>
+                  <pre>{project.development}</pre>
+                </p>
+                <p class={styles.growthTitle}>
+                  성장 경험 <i className='ri-message-2-line'></i>{' '}
+                </p>
+                <p className={styles.growth}>{project.growth}</p>
                 <p className={styles.stackTitle}>사용 기술</p>
                 <p className={styles.stackInfo}>{project.stackInfo}</p>
               </section>

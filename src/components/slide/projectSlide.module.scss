@@ -70,32 +70,34 @@
     height: 55%;
     font-family: typo.$notosans;
 
-    .infoTitle {
+    .developmentTitle, .growthTitle {
       font-weight: 700;
     }
 
-    .mainInfo {
+    .development,.growth {
+      margin: 0.8rem 0 0.8rem 0;
       line-height: 1.5rem;
       margin-top: 0.6rem;
       font-weight: 300;
       font-size: 14px;
-      height: 75%;
       word-break: break-all;
       word-wrap: break-word;
       overflow-y: scroll;
     }
 
     .stackTitle {
+      margin-top: 0.8rem;
       font-weight: 700;
     }
 
     .stackInfo {
-      margin-top: 0.6rem;
+      margin-top: 0.8rem;
       font-weight: 300;
     }
   }
 
   .linkSection {
+    margin-top: 0.8rem;
     width: 100%;
     padding-left: 1.5rem;
 

@@ -6,7 +6,6 @@ import Projects from '../../components/projects/Projects';
 import Nav from '../../components/nav/Nav';
 import AsisTobe from '../../components/asistobe/AsisTobe';
 import Footer from '../../components/footer/Footer';
-import { useInView } from 'react-intersection-observer';
 
 const Fullpage = () => {
   const [navView, setNavView] = useState();

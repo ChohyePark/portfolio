@@ -7,7 +7,6 @@ import { useInView } from 'react-intersection-observer';
 const Stacks = ({ scrollRef }) => {
   const [frontendData, setFrontendData] = useState([]);
   const [backendData, setBackendData] = useState([]);
-  const [navRef, navView] = useInView();
   const [firstRef, firstView] = useInView();
   const [secondRef, secondView] = useInView();
   const [thirdRef, thirdView] = useInView();
@@ -69,6 +68,7 @@ const Stacks = ({ scrollRef }) => {
                       <div className={styles.imgBox}>
                         <img
                           src={require(`../../assets/icon/${item.logo}.png`)}
+                          alt={item.stack}
                         />
                       </div>
                       <div className={styles.frontItem}>
@@ -102,6 +102,7 @@ const Stacks = ({ scrollRef }) => {
                       <div className={styles.imgBox}>
                         <img
                           src={require(`../../assets/icon/${item.logo}.png`)}
+                          alt={item.stack}
                         />
                       </div>
                       <div className={styles.backItem}>
