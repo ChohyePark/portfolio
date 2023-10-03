@@ -4,12 +4,13 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import styles from './projectSlide.module.scss';
-import { EffectCoverflow, Navigation, Mousewheel } from 'swiper';
+import { EffectCoverflow, Navigation } from 'swiper';
 
 export default function ProjectSlide({ projects }) {
   return (
     <>
       <Swiper
+        allowTouchMove={false}
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
@@ -23,7 +24,7 @@ export default function ProjectSlide({ projects }) {
           slideShadows: true,
         }}
         navigation={true}
-        modules={[EffectCoverflow, Navigation, Mousewheel]}
+        modules={[EffectCoverflow, Navigation]}
         className={styles.swiper}
       >
         {projects.map((project, i) => {
@@ -48,10 +49,10 @@ export default function ProjectSlide({ projects }) {
                 <p className={styles.developmentTitle}>
                   담당 개발 내용 <i className='ri-message-2-line'></i>{' '}
                 </p>
-                <p className={styles.development}>
+                <div className={styles.development}>
                   <pre>{project.development}</pre>
-                </p>
-                <p class={styles.growthTitle}>
+                </div>
+                <p className={styles.growthTitle}>
                   성장 경험 <i className='ri-message-2-line'></i>{' '}
                 </p>
                 <p className={styles.growth}>{project.growth}</p>
@@ -59,11 +60,24 @@ export default function ProjectSlide({ projects }) {
                 <p className={styles.stackInfo}>{project.stackInfo}</p>
               </section>
               <section className={styles.linkSection}>
-                <a href={project.link}>
-                  <div className={styles.githubBtn}>
-                    <i class='ri-github-fill' />
+                <div
+                  className={styles.githubBtn}
+                  onClick={() => {
+                    window.location.href = project.github;
+                  }}
+                >
+                  <i className='ri-github-fill' />
+                </div>
+                {project.gitwiki ? (
+                  <div
+                    className={styles.gitwikiBtn}
+                    onClick={() => {
+                      window.location.href = project.gitwiki;
+                    }}
+                  >
+                    Wiki
                   </div>
-                </a>
+                ) : null}
               </section>
             </SwiperSlide>
           );

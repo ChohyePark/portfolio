@@ -2,7 +2,7 @@ import styles from './rotationButton.module.scss';
 
 const RotationButton = () => {
   return (
-    <div class='c-ip-circle-text'>
+    <div className='c-ip-circle-text'>
       <svg
         viewBox='0 0 140 140'
         className={styles.cIpCircleText__svg}
