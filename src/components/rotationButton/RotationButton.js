@@ -7,8 +7,8 @@ const RotationButton = () => {
         viewBox='0 0 140 140'
         className={styles.cIpCircleText__svg}
         style={{
-          width: '100px',
-          height: '100px',
+          width: '140px',
+          height: '140px',
         }}
       >
         <defs>
@@ -19,7 +19,8 @@ const RotationButton = () => {
         </defs>
         <text className={`c-ip-circle-text__title ${styles.buttonText}`}>
           <textPath xlinkHref='#circle-f0ef3aa'>
-            Next ・ Next ・ Next ・ Next ・ Next ・ Next ・ Next ・
+            ・ Thank you for watching ! 😜 💖 ・ Thank you for watching ! 😜 💖
+            ・ ・ ・ ・
           </textPath>
         </text>
       </svg>

@@ -19,8 +19,8 @@ export default function ProjectSlide({ projects }) {
         coverflowEffect={{
           rotate: 10,
           stretch: 0,
-          depth: 100,
-          modifier: 2,
+          depth: 30,
+          modifier: 5,
           slideShadows: true,
         }}
         navigation={true}
@@ -46,6 +46,9 @@ export default function ProjectSlide({ projects }) {
                 </div>
               </section>
               <section className={styles.infoSection}>
+                <p className={styles.developPeriod}>
+                  프로젝트 기간 : <span>{project.developperiod}</span>
+                </p>
                 <p className={styles.developmentTitle}>
                   담당 개발 내용 <i className='ri-message-2-line'></i>{' '}
                 </p>

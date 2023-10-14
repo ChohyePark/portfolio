@@ -5,7 +5,6 @@ const Nav = ({ navView, setScrollIndex }) => {
   const [fade, setFade] = useState(false);
   const navHandler = (e) => {
     setScrollIndex(e.target.value);
-    console.log(e.target.value);
   };
 
   useEffect(() => {
@@ -13,6 +12,8 @@ const Nav = ({ navView, setScrollIndex }) => {
       setFade(true);
     }, 100);
   }, []);
+
+  console.log(navView);
 
   return (
     <div
@@ -28,7 +29,7 @@ const Nav = ({ navView, setScrollIndex }) => {
             navHandler(e);
           }}
         >
-          Intro
+          Home
         </li>
         <li
           className={navView === 1 ? styles.active : ''}
@@ -37,7 +38,7 @@ const Nav = ({ navView, setScrollIndex }) => {
             navHandler(e);
           }}
         >
-          Stacks
+          About me
         </li>
         <li
           className={navView === 2 ? styles.active : ''}
@@ -46,7 +47,7 @@ const Nav = ({ navView, setScrollIndex }) => {
             navHandler(e);
           }}
         >
-          Project
+          Stacks
         </li>
         <li
           className={navView === 3 ? styles.active : ''}
@@ -55,7 +56,7 @@ const Nav = ({ navView, setScrollIndex }) => {
             navHandler(e);
           }}
         >
-          As is To be
+          Project
         </li>
       </ul>
     </div>

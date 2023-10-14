@@ -7,7 +7,7 @@ body {
 }
 
 %li {
-  font-family: typo.$notosans;
+  font-family: typo.$nanumgothic;
   display: flex;
   flex-direction: row;
   z-index: 1;
@@ -48,17 +48,16 @@ body {
 
 .container{
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .stackSection {
-  height: 700px;
+  height: 730px;
   display: flex;
 
   .stackWrapper {
-    padding-top: 10px;
+    padding-top: 6rem;
     width: 100%;
     display: flex;
     text-align: center;
@@ -83,7 +82,7 @@ body {
       }
 
       .guide {
-        font-family: typo.$notosans;
+        font-family: typo.$nanumgothic;
         padding-left: 1rem;
         margin-top: 0.8rem;
         font-size: 14px;

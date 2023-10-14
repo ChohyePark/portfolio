@@ -44,7 +44,12 @@ const Introduction = ({ scrollRef }) => {
             <div className={styles.title}>
               <div
                 className={`${styles.cycle} ${
-                  firstLoad ? styles.slideDownLoad : ''
+                  secondLoad ? styles.slideDownLoad : ''
+                }`}
+              ></div>
+              <div
+                className={`${styles.shadow} ${
+                  secondLoad ? styles.slideDownLoad : ''
                 }`}
               ></div>
               <p
@@ -63,10 +68,9 @@ const Introduction = ({ scrollRef }) => {
                 프론트엔드 개발자를 꿈꾸는 박초혜 입니다.
                 <br />
                 저는 스스로 <span>무엇을 잘하고 무엇이 부족한지</span>{' '}
-                모니터링하며 생각이 아닌 행동으로 부족한 부분을 개선해 나가는
-                것을 좋아합니다.
+                모니터링하며 부족한 부분을 개선해 나가는 것을 좋아합니다.
                 <br />
-                타인이 느낄 수 있는 성장을 할 수 있도록 노력하겠습니다.
+                눈에 보이는 성장을 할 수 있도록 노력하겠습니다.
                 <br />
               </p>
             </div>
@@ -79,6 +83,16 @@ const Introduction = ({ scrollRef }) => {
                 <p className={styles.contactTitle}>Contact</p>
                 <ul className={styles.contactList}>
                   <li>
+                    <i class='ri-github-fill'></i>
+                    <a
+                      href='https://github.com/ChohyePark/'
+                      style={{ color: 'black' }}
+                    >
+                      {' '}
+                      Github
+                    </a>
+                  </li>
+                  <li>
                     <i className='ri-quill-pen-line'></i>
                     <a
                       href='https://sysoutctrlspace.tistory.com/'
@@ -87,10 +101,6 @@ const Introduction = ({ scrollRef }) => {
                       {' '}
                       Blog
                     </a>
-                  </li>
-                  <li>
-                    <i className='ri-phone-fill'></i>
-                    <span> 010 ・ 5878 ・ 2939 </span>
                   </li>
                   <li>
                     <i className='ri-mail-line'></i>
@@ -131,13 +141,6 @@ const Introduction = ({ scrollRef }) => {
               load ? styles.load : ''
             }`}
           ></div>
-          <div
-            className={`${styles.buttonBox} ${styles.rotationButton} ${
-              secondLoad ? styles.load : ''
-            }`}
-          >
-            <RotationButton></RotationButton>
-          </div>
         </section>
       </div>
     </>

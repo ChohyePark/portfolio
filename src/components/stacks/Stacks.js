@@ -45,7 +45,7 @@ const Stacks = ({ scrollRef }) => {
                 firstView ? styles.slideUpLoad : ''
               }`}
             >
-              아이콘에 마우스를 올려주세요.
+              아이콘에 마우스를 올려주세요 👀✨
             </p>
             <div
               className={`${styles.frontendTitle} ${styles.fade} ${
@@ -126,7 +126,7 @@ const Stacks = ({ scrollRef }) => {
       </section>
       <section
         className={styles.designSection}
-        ref={(el) => (scrollRef.current[2] = el)}
+        ref={(el) => (scrollRef.current[3] = el)}
       >
         <div
           className={`${styles.lineX} ${styles.line} ${
